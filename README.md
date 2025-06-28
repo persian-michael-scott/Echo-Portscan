@@ -1,2 +1,37 @@
 # Echo-Portscan
-Runs on 2 server to check the connectivity between them on selected ports 
+Runs on 2 server to check the TCP/UDP connectivity between them on selected ports 
+
+
+## Install & Use
+
+
+
+<br><br>
+نصب: دستور زیر رو وارد کنید ،  اسکریپت دانلود و اجرا میشه.
+
+<br>
+
+
+```sh
+mkdir echo-portscan && cd echo-portscan && wget https://raw.githubusercontent.com/persian-michael-scott/Echo-Portscan/refs/heads/main/portscanner.sh && chmod +x portscanner.sh && ./portscanner.sh
+```
+<br>
+
+ برای هر بار اجرای نرم افزار به پوشه echo-portscan برید و
+ ```sh
+./portscanner.sh
+```
+رو اجرا کنید.
+<br>
+
+در سرور حتما iptable رو فعال کنید و فقط به سرور کلاینت یا سرور دیگه ای که نیازه دسترسی داشته باشه دسترسی بدید.
+در جریان باشید اگه iptable رو فعال کنید دسترسی سرور فقط از طریق آیپی هایی که میذارید باز میمونه و از بقیه قطع میشه.
+<br>
+در مود Server میاد روی پورت هایی که استفاده نشده در رنج یا فایلی که بهش میدید پورت باز میکنه و گوش میده.
+<br>
+روی سرور حواستون باشه تعداد خیلی زیاد پورت باز نکنید هر 1000 تا پورت حدود 1.5 گیگ رم مصرف میکنه.
+<br>
+کلاینت یه پیام به سرور میفرسته و در صورتی که روی اون پورت جواب گرفت اون پورت رو توی فایل ذخیره میکنه.
+<br>
+<br>
+من خودم یه بار خارج رو میذارم سرور و داخل رو کلاینت فایل خروجی میگیرم. بعد همون فایل رو میبرم سرور خارج و حالت برعکس رو اجرا میکنم این دفعه به جای اینکه رنج وارد کنم فایل رو به اسکریپت میدم. اینجوری ارتباط دوطرفه رو اون رنج مشخص میشه چه پورت هایی هست.
